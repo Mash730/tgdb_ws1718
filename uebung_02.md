@@ -93,7 +93,10 @@ Kombiniere Aufgabe 7 und 8 so, dass nur Personen (`ACCOUNT`) angezeigt werden, d
 
 #### Lösung
 ```sql
-
+SELECT SURNAME
+FROM ACCOUNT
+INNER JOIN ACC_VEHIC
+ON ACCOUNT.ACCOUNT_ID = ACC_VEHIC.ACCOUNT_ID;
 
 
 ```
@@ -103,7 +106,11 @@ Modifizierde die Aufgabe 9 so, dass nur die Person mit der `ACCOUNT_ID` = `7` an
 
 #### Lösung
 ```sql
-Deine Lösung
+SELECT SURNAME
+FROM ACCOUNT
+INNER JOIN ACC_VEHIC
+ON ACCOUNT.ACCOUNT_ID = ACC_VEHIC.ACCOUNT_ID
+WHERE ACCOUNT_ID = 7;
 ```
 
 ### Aufgabe 12
@@ -112,7 +119,9 @@ Erstelle für dich einen neuen Benutzer.
 
 #### Lösung
 ```sql
-Deine Lösung
+Insert into ACCOUNT (ACCOUNT_ID,SURNAME,FORENAME,EMAIL,C_DATE,U_DATE) 
+values('10','Wolf','Nico','wolfni@fh-trier.de',SYSDATE, to_date('15.09.17','DD.MM.RR'));
+
 ```
 
 ### Aufgabe 13
@@ -120,7 +129,10 @@ Erstelle für deinen neuen Benutzer ein neues Auto. Dieses Auto dient als Vorlag
 
 #### Lösung
 ```sql
-Deine Lösung
+
+
+Insert into VEHICLE (VEHICLE_ID,VEHICLE_TYPE_ID,PRODUCER_ID,VERSION,DEFAULT_GAS_ID,PS,BUILD_YEAR,DOORS,C_DATE,U_DATE) values ('1','1','1','Ford','1','75',to_date('18.08.08','DD.MM.RR'),'5',to_date('15.09.17','DD.MM.RR'),to_date('15.09.17','DD.MM.RR'));
+
 ```
 
 ### Aufgabe 14

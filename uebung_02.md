@@ -17,19 +17,22 @@ Schaue dir das Datenbankmodell an. Wofür steht hinter dem Datentyp `NUMBER` die
 Nehme dir die Oracle [Dokumentation](https://docs.oracle.com/cd/B28359_01/server.111/b28318/datatype.htm#CNCPT012) zu Hilfe.
 
 #### Lösung
-Deine schritliche Antwort.
+
+--NUMBER(n,p) steht für ganzzahlige Werte bzw. Dezimalwerte mit insgesamt n Stellen, von denen p Nachkommastellen bilden
+
 
 ### Aufgabe 2
 Was bedeuten die durchgezogenen Linien, die zwischen einigen Tabellen abgebildet sind?
 
 #### Lösung
-Deine schriftliche Antwort.
+
+-- Hier darf nicht überholt werden!
 
 ### Aufgabe 3
 Was bedeutet die gestrichelte Linie, die zwischen der Tabelle `ACC_VEHIC` und `GAS_STATION` abgebildet ist?
 
 #### Lösung
-Deine schriftliche Antwort.
+-- nicht identifizierbare Beziehung. DEFAULT_GAS_STATION ist nur ein FK, der nicht zum PK gehört.
 
 ### Aufgabe 4
 Die folgende Abbildung beschreibt eine Beziehung zwischen Tabellen. Sie wird auch `n` zu `m` Beziehung genannt. Beschreibe kurz die Bedeutung dieser Beziehung.
@@ -37,20 +40,23 @@ Nehme dir diesen [Artikel](https://glossar.hs-augsburg.de/Beziehungstypen) zu Hi
 
 ![n-to-m-relationship](./img/n-to-m-relationship.png)
 
-Deine schriftliche Antwort.
+-- Es liegt eine 1 zu n verbindung vor
 
 ### Aufgabe 5
 Was bedeutet der Buchstabe `P` und `F` neben den Attributen von Tabellen?
 
 #### Lösung
-Deine schriftliche Lösung.
+
+-- Primary Key oder Foreign Key
 
 ### Aufgabe 6
 Importiere die SQL-Dump-Datei in dein eigenes Schema. Wie lautet dazu der Befehl um dem import zu starten?
 
 #### Lösung
 ```sql
-Deine Lösung
+
+START tutorium.sql
+
 ```
 
 ### Aufgabe 7
@@ -58,7 +64,10 @@ Gebe alle Datensätze der Tabelle `ACCOUNT` aus.
 
 #### Lösung
 ```sql
-Deine Lösung
+
+SELECT *
+FROM ACCOUNT;
+
 ```
 
 ### Aufgabe 8
@@ -66,7 +75,8 @@ Modifiziere Aufgabe 6 so, dass nur die Spalte `ACCOUNT_ID` ausgegeben wird.
 
 #### Lösung
 ```sql
-Deine Lösung
+SELECT ACCOUNT_ID 
+FROM ACCOUNT;
 ```
 
 ### Aufgabe 9
@@ -74,7 +84,8 @@ Gebe alle Spalten der Tabelle `VEHICLE` aus.
 
 #### Lösung
 ```sql
-Deine Lösung
+SELECT *
+FROM VEHICLE;
 ```
 
 ### Aufgabe 10
@@ -82,7 +93,9 @@ Kombiniere Aufgabe 7 und 8 so, dass nur Personen (`ACCOUNT`) angezeigt werden, d
 
 #### Lösung
 ```sql
-Deine Lösung
+
+
+
 ```
 
 ### Aufgabe 11

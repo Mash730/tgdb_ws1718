@@ -17,16 +17,21 @@ Schaue dir das Datenbankmodell an. Wofür steht hinter dem Datentyp `NUMBER` die
 Nehme dir die Oracle [Dokumentation](https://docs.oracle.com/cd/B28359_01/server.111/b28318/datatype.htm#CNCPT012) zu Hilfe.
 
 #### Lösung
+Der Datentyp `NUMBER` ermöglicht das speichern von positiven als auch negativen Ganzzahlen und Fließkommazahlen. Die Werte in den Klammern haben unterschiedliche Bedeutungen. Die erste Stelle in der Klammer steht für die Gesamte Anzahl von Zahlen und die zweite Stelle, wie viele Zahlen hinter dem Komma stehen.
 
---NUMBER(n,p) steht für ganzzahlige Werte bzw. Dezimalwerte mit insgesamt n Stellen, von denen p Nachkommastellen bilden
+Einige Beispiele:
 
+| Deklaration   | Beispielmöglichkeiten                   |
+| ------------- | --------------------------------------- |
+| NUMBER(38,0)  | 9999999999999999999999999999999999999   |
+| NUMBER(3,2)   | 1.81, 9.74, 0.54                        |
+| NUMBER(5,2)   | 842.52, 965.45, 14.45                   |
 
 ### Aufgabe 2
 Was bedeuten die durchgezogenen Linien, die zwischen einigen Tabellen abgebildet sind?
 
 #### Lösung
 
--- Hier darf nicht überholt werden!
 
 ### Aufgabe 3
 Was bedeutet die gestrichelte Linie, die zwischen der Tabelle `ACC_VEHIC` und `GAS_STATION` abgebildet ist?
@@ -75,7 +80,7 @@ Modifiziere Aufgabe 6 so, dass nur die Spalte `ACCOUNT_ID` ausgegeben wird.
 
 #### Lösung
 ```sql
-SELECT ACCOUNT_ID 
+SELECT ACCOUNT_ID
 FROM ACCOUNT;
 ```
 
@@ -119,7 +124,7 @@ Erstelle für dich einen neuen Benutzer.
 
 #### Lösung
 ```sql
-Insert into ACCOUNT (ACCOUNT_ID,SURNAME,FORENAME,EMAIL,C_DATE,U_DATE) 
+Insert into ACCOUNT (ACCOUNT_ID,SURNAME,FORENAME,EMAIL,C_DATE,U_DATE)
 values('10','Wolf','Nico','wolfni@fh-trier.de',SYSDATE, to_date('15.09.17','DD.MM.RR'));
 
 ```

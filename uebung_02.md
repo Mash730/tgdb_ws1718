@@ -31,13 +31,13 @@ Einige Beispiele:
 Was bedeuten die durchgezogenen Linien, die zwischen einigen Tabellen abgebildet sind?
 
 #### Lösung
-
+Die durchgezogene Linie bildet eine Beziehung zwischen Tabellen ab. Die Beziehung muss beim Anlegen eines neuen Datensatzes ausgefüllt werden.
 
 ### Aufgabe 3
 Was bedeutet die gestrichelte Linie, die zwischen der Tabelle `ACC_VEHIC` und `GAS_STATION` abgebildet ist?
 
 #### Lösung
--- nicht identifizierbare Beziehung. DEFAULT_GAS_STATION ist nur ein FK, der nicht zum PK gehört.
+Die gestrichelte Linie bildet eine Beziehung zwischen Tabellen ab. Die Beziehung muss **nicht** beim Anlegen eines neuen Datensatzes ausgefüllt werden.
 
 ### Aufgabe 4
 Die folgende Abbildung beschreibt eine Beziehung zwischen Tabellen. Sie wird auch `n` zu `m` Beziehung genannt. Beschreibe kurz die Bedeutung dieser Beziehung.
@@ -45,14 +45,13 @@ Nehme dir diesen [Artikel](https://glossar.hs-augsburg.de/Beziehungstypen) zu Hi
 
 ![n-to-m-relationship](./img/n-to-m-relationship.png)
 
--- Es liegt eine 1 zu n verbindung vor
+Eine `n` zu `m` Beziehung beschreibt, dass `n` Datensätze mit `m` Datensätze verknüpft werden können. Als Beispiel kann hier eine Person mehrere Hobbys haben. Die Verknüpfung welche Hobbies eine Person hat wird in der Tabelle `PERSON_HOBBY` abgebildet.
 
 ### Aufgabe 5
 Was bedeutet der Buchstabe `P` und `F` neben den Attributen von Tabellen?
 
 #### Lösung
-
--- Primary Key oder Foreign Key
+Primary Key `P` und Foreign Key `F`.
 
 ### Aufgabe 6
 Importiere die SQL-Dump-Datei in dein eigenes Schema. Wie lautet dazu der Befehl um dem import zu starten?
@@ -61,7 +60,8 @@ Importiere die SQL-Dump-Datei in dein eigenes Schema. Wie lautet dazu der Befehl
 ```sql
 
 START tutorium.sql
-
+start C:/Users/max.mustermann/workspace/github.com/max.mustermann/tgdb_ws1718/sql/tutorium.sql
+start /home/max/workspace/github.com/max.mustermann/tgdb_ws1718/sql/tutorium.sql
 ```
 
 ### Aufgabe 7
@@ -69,14 +69,12 @@ Gebe alle Datensätze der Tabelle `ACCOUNT` aus.
 
 #### Lösung
 ```sql
-
 SELECT *
 FROM ACCOUNT;
-
 ```
 
 ### Aufgabe 8
-Modifiziere Aufgabe 6 so, dass nur die Spalte `ACCOUNT_ID` ausgegeben wird.
+Modifiziere Aufgabe 7 so, dass nur die Spalte `ACCOUNT_ID` ausgegeben wird.
 
 #### Lösung
 ```sql
@@ -102,8 +100,6 @@ SELECT SURNAME
 FROM ACCOUNT
 INNER JOIN ACC_VEHIC
 ON ACCOUNT.ACCOUNT_ID = ACC_VEHIC.ACCOUNT_ID;
-
-
 ```
 
 ### Aufgabe 11
@@ -115,7 +111,7 @@ SELECT SURNAME
 FROM ACCOUNT
 INNER JOIN ACC_VEHIC
 ON ACCOUNT.ACCOUNT_ID = ACC_VEHIC.ACCOUNT_ID
-WHERE ACCOUNT_ID = 7;
+WHERE ACCOUNT.ACCOUNT_ID = 7;
 ```
 
 ### Aufgabe 12
